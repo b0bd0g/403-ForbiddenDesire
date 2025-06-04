@@ -2,7 +2,7 @@
 A 403 fuzzer using a variety of techniques
 
 
-![Image](pictures/forbidden.png)
+<img src="./picture.png" alt="Image" width="400">
 
 ## Techniques implemented:
 
@@ -16,7 +16,7 @@ A 403 fuzzer using a variety of techniques
 
 -**Incorrect Chunking** - includes data that is chunked incorrectly in the request
 
--**User Agent Fuzzing** - tries multiple user agents to see if any return a response code other than 403. The user agent list is the one from SecLists (include link). Given the number of user agents it will only print ones that have a response code other than 403.
+-**User Agent Fuzzing** - tries multiple user agents to see if any return a response code other than 403. The user agent list is the one from SecLists (https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/User-Agents/UserAgents.fuzz.txt). Given the number of user agents it will only print ones that have a response code other than 403.
 
 -**Remote File Inclusion** - this requires that the attacker machine has PHP installed and that `allow_url_fopen` is enabled to allow Remote File Inclusion. It will start a PHP server and attempt to fetch the target URL by way of Remote File Inclusion from that PHP Server. **NOTE:** the RFI method is not included in the `--all` flag and must be specifically called. 
 
